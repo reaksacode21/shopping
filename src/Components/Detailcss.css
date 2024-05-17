@@ -1,0 +1,53 @@
+.our-service {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #0082e6;
+    margin-bottom: 10px;
+}
+
+.box-service {
+    position: relative;
+    /* border: 2px skyblue solid;
+    background-color: aqua; */
+    box-shadow: 10px;
+    border-radius: 10px;
+}
+
+.pic-des {
+    display: block;
+
+    /* border: 1px solid black; */
+
+}
+
+.pic {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+img {
+    border: 5px solid rgb(0, 204, 255);
+    border-radius: 50%;
+    align-items: center;
+    cursor: pointer;
+}
+
+img:hover {
+    border: 5px solid rgb(1, 1, 1);
+}
+
+.des {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.des p {
+    text-align: center;
+}
+
+@media screen and (max-width: 980px) {}
