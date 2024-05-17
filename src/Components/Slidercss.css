@@ -1,0 +1,42 @@
+.slide-container{
+    width: 95%;
+    margin: 16.5px;
+    /* margin: 1px; */
+} 
+
+.divStyle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    /* background-repeat: no-repeat; */
+    height: 500px;
+}
+
+.spanStyle {
+    font-size: 20px;
+    background: #ac4a4a;
+    color: #000000;
+}
+
+@media (max-width: 700px) {
+    .divStyle {
+        height: 350px;
+    
+    }
+}
+
+/* Responsive adjustments for tablets */
+@media (min-width: 701px) and (max-width: 1024px) {
+    .slide-container {
+        margin: 20px;
+        max-width: 800px; /* Adjust the max-width for tablets */
+    }
+}
+
+/* Responsive adjustments for phones */
+@media (max-width: 500px) {
+    .slide-container {
+        padding: 0 10px; /* Add padding to the sides to prevent content from being too close to the edges */
+    }
+}

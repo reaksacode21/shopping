@@ -13,10 +13,10 @@ function Navbar() {
                         <FaAlignJustify />
                     </i>
                 </label>
-                <label class="logo">LiveNew</label>
+                <label class="logo">BlueShop</label>
                 <ul>
                     <li><a class="active" href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
+                    <li><a href="#">Shop</a></li>
                     <li><a href="#">Services</a></li>
                     <li><a href="#">Contact</a></li>
                     <li><a href="#">Feedback</a></li>
