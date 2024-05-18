@@ -1,169 +1,148 @@
-/* Google Fonts Poppins */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+@import url('https://fonts.googleapis.com/css?family=Ubuntu');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
+/* body {
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    justify-content: center;
+    font-family: 'Ubuntu', sans-serif;
+} */
 
-.product-card {
-  position: relative;
-  max-width: 355px;
-  width: 100%;
-  border-radius: 25px;
-  padding: 20px 30px 30px 30px;
-  background: #fff;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-  z-index: 3;
-  overflow: hidden;
+h1 {
+    font-size: 1.2rem;
+    text-transform: capitalize;
 }
-.product-card .logo-cart{
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+
+.card {
+    position: relative;
+    border-radius: 5px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.3);
+    height: 500px;
+    overflow: hidden;
+    width: 400px;
 }
-.product-card .logo-cart img{
-  height: 60px;
-  width: 60px;
-  object-fit: cover;
+
+.card > figure {
+    width: 90%;
+    margin: 20px auto 0 auto;
 }
-.product-card .logo-cart i{
-  font-size: 27px;
-  color: #707070;
-  cursor: pointer;
-  transition: color 0.3s ease;
+
+.card > figure > img {
+    width: 100%;
 }
-.product-card .logo-cart i:hover{
-  color: #333;
+
+.details {
+    background-color: #FFF;
+    border-radius: 10px;
+    padding: 20px;
+    position: absolute;
+    top: 85%;
+    width: 100%;
+    transition: box-shadow .3s ease-in-out,
+                top .3s ease-in-out;
 }
-.product-card .main-images{
-  position: relative;
-  height: 210px;
+
+.card:hover .details {
+    box-shadow: 0 -5px 10px rgba(0,0,0,0.3);
+    top: 40%;
 }
-.product-card .main-images img{
-  position: absolute;
-  height: 300px;
-  width: 300px;
-  object-fit: cover;
-  transform: rotate(18deg);
-  left: 12px;
-  top: -40px;
-  z-index: -1;
-  opacity: 0;
-  transition: opacity 0.5s ease;
+
+.details > .min-details,
+.details > .options,
+.details > .options > .options-size,
+.details > .options > .options-colors {
+    margin-bottom: 20px;
 }
-.product-card .main-images img.active{
-  opacity: 1;
+
+.details > .min-details {
+    display: flex;
+    justify-content: space-between;
 }
-.product-card .shoe-details .shoe_name{
-  font-size: 24px;
-  font-weight: 500;
-  color: #161616;
+
+.details > .min-details > h1 > span {
+    color: #7B7B7B;
+    display: block;
+    font-size: .9rem;
+    font-weight: 400;
 }
-.product-card .shoe-details p{
-  font-size: 12px;
-  font-weight: 400;
-  color: #333;
-  text-align: justify;
+
+.details > .options h1 {
+    margin-bottom: 5px;
 }
-.product-card .shoe-details .stars i{
-  margin: 0 -1px;
-  color: #333;
+
+.details > .options ul {
+    list-style-type: none;
+    display: flex;
 }
-.product-card .color-price .color-option{
-  display: flex;
-  align-items: center;
+
+.details > .options ul li {
+    border-radius: 50%;
+    cursor: pointer;
+    height: 30px;
+    line-height: 30px;
+    margin-right: 5px;
+    text-align: center;
+    width: 30px;
 }
-.color-price{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 10px;
+
+.options-size > ul > li {
+    background-color: rgba(0,0,0,0.5);
+    color: #FFF;
+    font-size: .7rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    transition: background-color .3s ease-in-out;
 }
-.color-price .color-option .color{
-  font-size: 18px;
-  font-weight: 500;
-  color: #333;
-  margin-right: 8px;
+
+.options-size > ul > li:hover {
+    background-color: #192a56;
 }
-.color-option  .circles{
-  display: flex;
+
+.options-colors > ul > li {
+    border: none;
 }
-.color-option  .circles .circle{
-  height: 18px;
-  width: 18px;
-  background: #0071C7;
-  border-radius: 50%;
-  margin: 0 4px;
-  cursor: pointer;
-  transition: all 0.4s ease;
+
+.options-colors > ul > li:nth-child(1) {
+    background-color: #FF1;
 }
-.color-option  .circles .circle.blue.active{
-  box-shadow: 0 0 0 2px #fff,
-               0 0 0 4px #0071C7;
+
+.options-colors > ul > li:nth-child(2) {
+    background-color: #000;
 }
-.color-option  .circles .circle.pink{
-  background: #FA1795;
+
+.options-colors > ul > li:nth-child(3) {
+    background-color: #FB0000;
 }
-.color-option  .circles .circle.pink.active{
-  box-shadow: 0 0 0 2px #fff,
-               0 0 0 4px #FA1795;
+
+.options-colors > ul > li:nth-child(4) {
+    background-color: #FF69B4;
 }
-.color-option  .circles .circle.yellow{
-  background: #F5DA00;
+
+.options-colors > ul > li:nth-child(5) {
+    background-color: #192a56;
 }
-.color-option  .circles .circle.yellow.active{
-  box-shadow: 0 0 0 2px #fff,
-               0 0 0 4px #F5DA00;
+
+.btn {
+    background-color: #192a56;
+    border-radius: 5px;
+    color: #FFF;
+    display: block;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    text-transform: capitalize;
+    width: 100%;
+    transition: box-shadow .3s ease-in-out,
+                transform .3s ease-in-out;
 }
-.color-price .price{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-.color-price .price .price_num{
-  font-size: 25px;
-  font-weight: 600;
-  color: #707070;
-}
-.color-price .price .price_letter{
-  font-size: 10px;
-  font-weight: 600;
-  margin-top: -4px;
-  color: #707070;
-}
-.product-card .button{
-  position: relative;
-  height: 50px;
-  width: 100%;
-  border-radius: 25px;
-  margin-top: 30px;
-  overflow: hidden;
-}
-.product-card .button .button-layer{
-  position: absolute;
-  height: 100%;
-  width: 300%;
-  left: -100%;
-  background-image: linear-gradient(135deg,#9708CC, #43CBFF,#9708CC, #43CBFF );
-  transition: all 0.4s ease;
-  border-radius: 25PX;
-}
-.product-card .button:hover .button-layer{
-  left: 0;
-}
-.product-card .button button{
-  position: relative;
-  height: 100%;
-  width: 100%;
-  background: none;
-  outline: none;
-  border: none;
-  font-size: 18px;
-  font-weight: 600;
-  letter-spacing: 1px;
-  color: #fff;
+
+.btn:hover {
+  box-shadow: 0 5px 10px rgba(0,0,0,.3);
+  transform: translateY(-2px);
 }

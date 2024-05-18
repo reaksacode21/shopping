@@ -1,0 +1,16 @@
+.all-product{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: aqua;
+}
+.all-cardp{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 100%;
+}
+.card-p{
+    width: 100%;
+}

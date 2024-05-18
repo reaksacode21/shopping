@@ -1,50 +1,46 @@
 import React from 'react'
 import './Cardproductcss.css'
+import { FaArrowCircleRight } from "react-icons/fa";
 function Cardproduct() {
     return (
-        <div>
-            <div class="product-card">
-                <div class="logo-cart">
-                    <img src="images/logo.jpg" alt="logo"/>
-                        <i class='bx bx-shopping-bag'></i>
+        <div class="card">
+            <figure>
+                <img src="https://static2.cilory.com/189111-thickbox_default/no-logo-royal-blue-full-sleeves-henley-t-shirt.jpg" alt="t-shirt" />
+            </figure>
+            <section class="details pt-1" >
+                <div class="min-details">
+                    <h1>Remera <span>azul</span></h1>
+                    <h1 class="price">$45.99</h1>
                 </div>
-                <div class="main-images">
-                    <img id="blue" class="blue active" src="images/blue.png" alt="blue"/>
-                        <img id="pink" class="pink" src="images/pink.png" alt="blue"/>
-                            <img id="yellow" class="yellow" src="images/yellow.png" alt="blue"/>
-                            </div>
-                            <div class="shoe-details">
-                                <span class="shoe_name">ADDIDAS GAZE ZX</span>
-                                <p>Lorem ipsum dolor sit lorenm i amet, consectetur adipisicing elit. Eum, ea, ducimus!</p>
-                                <div class="stars">
-                                    <i class='bx bxs-star' ></i>
-                                    <i class='bx bxs-star' ></i>
-                                    <i class='bx bxs-star' ></i>
-                                    <i class='bx bxs-star' ></i>
-                                    <i class='bx bx-star' ></i>
-                                </div>
-                            </div>
-                            <div class="color-price">
-                                <div class="color-option">
-                                    <span class="color">Colour:</span>
-                                    <div class="circles">
-                                        <span class="circle blue active" id="blue"></span>
-                                        <span class="circle pink " id="pink"></span>
-                                        <span class="circle yellow " id="yellow"></span>
-                                    </div>
-                                </div>
-                                <div class="price">
-                                    <span class="price_num">$09.00</span>
-                                    <span class="price_letter">Nine dollar only</span>
-                                </div>
-                            </div>
-                            <div class="button">
-                                <div class="button-layer"></div>
-                                <button>Add To Cart</button>
-                            </div>
-                        </div>
+
+                <div class="options">
+                    <div class="options-size">
+                        <h1>sizes</h1>
+                        <ul>
+                            <li>xs</li>
+                            <li>s</li>
+                            <li>m</li>
+                            <li>l</li>
+                            <li>xl</li>
+                        </ul>
+                    </div>
+
+                    {/* <div class="options-colors mt-1">
+                        <h1>colors</h1>
+                        <ul>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                        </ul>
+                    </div> */}
                 </div>
-                )
+                <a href="#" class="btn">Add Product</a>
+            </section>
+        </div>
+
+    )
 }
 
-                export default Cardproduct
+export default Cardproduct
