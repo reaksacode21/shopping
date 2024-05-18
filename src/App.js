@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Footer from './Components/Footer';
 import Navbar from './Components/Navbar';
 import HomePage from './Pages/HomePage';
+import Productpage from './Pages/Productpage';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
@@ -11,6 +12,7 @@ function App() {
         <Navbar/>
         <Routes>
         <Route path="/" index element={<HomePage />} />
+        <Route path="/shop" index element={<Productpage />} />
         </Routes>
         <Footer/>
     </BrowserRouter>
