@@ -7,15 +7,15 @@ function Cardproduct() {
             <figure>
                 <img src="https://static2.cilory.com/189111-thickbox_default/no-logo-royal-blue-full-sleeves-henley-t-shirt.jpg" alt="t-shirt" />
             </figure>
-            <section class="details pt-1" >
+            <section class="details pt-1 mt-50" >
                 <div class="min-details">
-                    <h1>Remera <span>azul</span></h1>
-                    <h1 class="price">$45.99</h1>
+                    <h3>Remera <span>azul</span></h3>
+                    <h3 class="price">$45.99</h3>
                 </div>
 
-                <div class="options">
+                <div class="options ">
                     <div class="options-size">
-                        <h1>sizes</h1>
+                        <h3>sizes</h3>
                         <ul>
                             <li>xs</li>
                             <li>s</li>
@@ -24,9 +24,9 @@ function Cardproduct() {
                             <li>xl</li>
                         </ul>
                     </div>
-
-                    {/* <div class="options-colors mt-1">
-                        <h1>colors</h1>
+                    
+                    <div class="options-colors">
+                        <h3>colors</h3>
                         <ul>
                             <li></li>
                             <li></li>
@@ -34,9 +34,10 @@ function Cardproduct() {
                             <li></li>
                             <li></li>
                         </ul>
-                    </div> */}
+                    </div>
+                  
                 </div>
-                <a href="#" class="btn">Add Product</a>
+                <a href="#" class="btn btn-danger">Add Product</a>
             </section>
         </div>
 

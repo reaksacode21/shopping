@@ -97,12 +97,12 @@ body {
 
 @media (max-width: 1200px) {
     .card-list .card-item {
-        padding: 15px;
+        padding: 50px;
     }
 }
 
 @media screen and (max-width: 980px) {
     .card-list {
-        margin: 0 auto;
+        margin:  50px;
     }
 }
