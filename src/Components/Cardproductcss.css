@@ -33,14 +33,18 @@ h1 {
     margin: 20px auto 0 auto;
 }
 
-.card > figure > img {
+.card > figure > .pic {
     width: 100%;
+    height:300px
+    
+           
 }
 
 .details {
-    background-color: #FFF;
+    
+    background-color: #ffffff15;
     border-radius: 10px;
-    padding: 20px;
+    padding: 1px;
     position: absolute;
     top: 85%;
     width: 100%;
@@ -57,7 +61,7 @@ h1 {
 .details > .options,
 .details > .options > .options-size,
 .details > .options > .options-colors {
-    margin-bottom: 20px;
+    margin-bottom: 0px;
 }
 
 .details > .min-details {
@@ -145,4 +149,13 @@ h1 {
 .btn:hover {
   box-shadow: 0 5px 10px rgba(0,0,0,.3);
   transform: translateY(-2px);
+}
+@media (max-width: 1200px) {
+    .details{
+        padding: auto;
+    }
+}
+
+@media screen and (max-width: 980px) {
+   
 }
