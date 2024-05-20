@@ -5,9 +5,10 @@ function Cardproduct() {
     return (
         <div class="card">
             <figure>
-                <div className='pic' style={{ backgroundImage: "url('https://static2.cilory.com/189111-thickbox_default/no-logo-royal-blue-full-sleeves-henley-t-shirt.jpg')" }}>
-                    {/* Your content goes here */}
-                </div>
+                {/* <div className='pic' style={{ backgroundImage: "url('https://static2.cilory.com/189111-thickbox_default/no-logo-royal-blue-full-sleeves-henley-t-shirt.jpg')" }}>
+                   
+                </div> */}
+                <img src="https://static2.cilory.com/189111-thickbox_default/no-logo-royal-blue-full-sleeves-henley-t-shirt.jpg" alt="" />
             </figure>
             <section class="details" >
                 <div class="min-details">
@@ -42,10 +43,10 @@ function Cardproduct() {
                 </div>
                 <div className='row'>
                     <div className="col-sm-6 col-md-6 col-lg-6">
-                        <a href="#" class="btn btn-danger">Product Details</a>
+                        <a href="#" class="btn btn-danger">Details</a>
                     </div>
                     <div className="col-sm-6 col-md-6 col-lg-6">
-                        <a href="#" class="btn btn-danger">Add Product</a>
+                        <a href="#" class="btn btn-danger">Buy</a>
 
                     </div>
                 </div>
