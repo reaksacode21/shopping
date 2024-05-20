@@ -1,10 +1,12 @@
 import React from 'react'
 import Cardproduct from '../Components/Cardproduct'
 import './Productpage.css'
+import ProductDetail from '../Components/ProductDetail'
 
 function Productpage() {
     return (
         <div className='all-pro'>
+            <ProductDetail/>
             <div className="row bg">
                 <div className="col-sm-12 col-md-2 col-lg-2">
                     <table class="table table-dark table-hover">
