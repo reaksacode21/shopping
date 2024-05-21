@@ -3,7 +3,7 @@
     justify-content: center;
     align-items: center;
     width: 100%;
-    background-color: aqua;
+    /* background-color: aqua; */
 }
 .all-cardp{
    display: flex;
@@ -14,12 +14,12 @@
 }
 .bg{
     width: 100%;
-    background-color: aqua;
+    background-color: #fff;
 }
 .card-bg{
     display: flex;
     width: 100%;
-    background-color: rgb(22, 194, 51);
+    /* background-color: rgb(22, 194, 51); */
     flex-wrap: wrap;
 }
 .card-p{
@@ -28,3 +28,25 @@
     justify-content: center;
     width: 100%;
 }
+.menu-product{
+    background: #0082e6;
+    box-shadow: rgba(0, 204, 255, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    display: flex;
+    justify-content: center;
+}
+.all-menu{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    flex: start;
+    background: #0082e6;
+    /* box-shadow: rgba(0, 204, 255, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px; */
+    height: 100%;
+    width: 50%;
+  
+}  
+.all-menu >li{
+    margin: 10px;
+    justify-content: space-evenly;
+}
+

@@ -2,57 +2,55 @@ import React from 'react'
 import Cardproduct from '../Components/Cardproduct'
 import './Productpage.css'
 import ProductDetail from '../Components/ProductDetail'
+import { FaShoppingCart, FaUserCircle, FaRegBell, FaPhoneAlt,FaAlignJustify  } from "react-icons/fa";
 
 function Productpage() {
     return (
         <div className='all-pro'>
-            <ProductDetail/>
+            <ProductDetail />
             <div className="row bg">
-                <div className="col-sm-12 col-md-2 col-lg-2">
-                    <table class="table table-dark table-hover">
-                        <ul>
-                            <li>PRODUCT</li>
-                            <li>PRODUCT</li>
-                            <li>PRODUCT</li>
-                            <li>PRODUCT</li>
-                        </ul>
-                    </table>
+                <div className="col-sm-12 col-md-2 col-lg-2 menu-product">
+
+                    <ul className='all-menu'>
+                        <li><FaUserCircle
+                            style={{ width: '3rem', height: '3rem' }} /></li>
+                        <li ><FaShoppingCart
+                            style={{ width: '3rem', height: '3rem' }} /></li>
+
+                        <li><FaPhoneAlt
+                            style={{ width: '3rem', height: '3rem' }} /></li>
+                        <li><FaRegBell
+                            style={{ width: '3rem', height: '3rem' }} /></li>
+                        <li><FaAlignJustify 
+                            style={{ width: '3rem', height: '3rem' }} /></li>
+                    </ul>
+
                 </div>
                 <div className="col-sm-12 col-md-10 col-lg-10  all-cardp">
                     <div className="row card-bg">
-                        <div className="col-sm-12 col-md-6 col-lg-4 mt-2  bg-warning  card-p">
+                        <div className="col-sm-12 col-md-6 col-lg-4 mt-2   card-p">
                             <Cardproduct />
 
                         </div>
-                        <div className="col-sm-12 col-md-6 col-lg-4 mt-2  bg-warning  card-p">
+                        <div className="col-sm-12 col-md-6 col-lg-4 mt-2   card-p">
                             <Cardproduct />
                         </div>
-                        <div className="col-sm-12 col-md-6 col-lg-4 mt-2  bg-warning  card-p">
+                        <div className="col-sm-12 col-md-6 col-lg-4 mt-2   card-p">
                             <Cardproduct />
 
                         </div>
-                        <div className="col-sm-12 col-md-6 col-lg-4 mt-2  bg-warning  card-p">
+                        <div className="col-sm-12 col-md-6 col-lg-4 mt-2   card-p">
                             <Cardproduct />
 
                         </div>
-                        <div className="col-sm-12 col-md-6 col-lg-4 mt-2  bg-warning  card-p">
+                        <div className="col-sm-12 col-md-6 col-lg-4 mt-2   card-p">
                             <Cardproduct />
                         </div>
-                        <div className="col-sm-12 col-md-6 col-lg-4 mt-2  bg-warning  card-p">
+                        <div className="col-sm-12 col-md-6 col-lg-4 mt-2   card-p">
                             <Cardproduct />
 
                         </div>
-                        {/* <div className="col-sm-12 col-md-6 col-lg-6  bg-warning  card-p">
-                            <Cardproduct />
-                        </div> */}
-                        {/* <div className="col-sm-6 col-md-6 col-lg-4 card-p">
-                        <Cardproduct/>
 
-                        </div> */}
-                        {/* <div className="col-sm-6 col-md-4 col-lg-3">
-                        <Cardproduct/>
-
-                        </div> */}
                     </div>
                 </div>
 
