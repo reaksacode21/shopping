@@ -9,6 +9,7 @@
    display: flex;
    justify-content: center;
    align-items: center;
+   
    width: 100%;
 }
 .bg{
@@ -16,8 +17,10 @@
     background-color: aqua;
 }
 .card-bg{
+    display: flex;
     width: 100%;
     background-color: rgb(22, 194, 51);
+    flex-wrap: wrap;
 }
 .card-p{
     display: flex;
