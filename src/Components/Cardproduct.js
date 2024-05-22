@@ -9,18 +9,18 @@ function Cardproduct({ product }) {
                 {/* <div className='pic' style={{ backgroundImage: "url('https://static2.cilory.com/189111-thickbox_default/no-logo-royal-blue-full-sleeves-henley-t-shirt.jpg')" }}>
                    
                 </div> */}
-                <img src={product.image_link} alt="" />
+                <img src={product.images} alt="" />
             </figure>
             <section class="details" >
                 <div class="min-details">
                     {/* <h3>Remera <span>azul</span></h3> */}
-                    <h3>{handleText(product.name,10)}</h3>
+                    <h3>{handleText(product.title,10)}</h3>
                     <h3 class="price">{product.price+"$"}</h3>
                 </div>
 
                 <div class="options ">
                     <div class="options-size">
-                        <h3>sizes</h3>
+                        <h3 style={{color:"green"}} >sizes</h3>
                         <ul>
                             <li>xs</li>
                             <li>s</li>
@@ -31,7 +31,7 @@ function Cardproduct({ product }) {
                     </div>
 
                     <div class="options-colors">
-                        <h3>colors</h3>
+                        <h3 style={{color:"green"}}>colors</h3>
                         <ul>
                             <li></li>
                             <li></li>
@@ -44,10 +44,10 @@ function Cardproduct({ product }) {
                 </div>
                 <div className='row'>
                     <div className="col-sm-6 col-md-6 col-lg-6">
-                        <a href="#" class="btn btn-danger">Details</a>
+                        <a href="#" class="btn btn-success">Details</a>
                     </div>
                     <div className="col-sm-6 col-md-6 col-lg-6">
-                        <a href="#" class="btn btn-danger">Buy</a>
+                        <a href="#" class="btn btn-success">Buy</a>
 
                     </div>
                 </div>

@@ -1,16 +1,17 @@
 .all-detail{
  
-    background-color: rgb(255, 123, 0);
+    background-color: rgba(255, 123, 0, 0);
+    box-shadow: 0 0 10px 0 rgba(0,0,0,0.45) inset;
     width: 100%;
 }
 .all-detailReal{
     width: 100%;
 }
 .all-productDetail{
-    background-color: rgb(255, 60, 0);
+    background-color: rgba(153, 153, 153, 0);
    
 }
 .all-productPic{
-    background-color: blueviolet;
+    background-color: rgba(137, 43, 226, 0);
    
 }

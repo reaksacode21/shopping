@@ -5,13 +5,14 @@ import ProductDetail from '../Components/ProductDetail'
 import { FaShoppingCart, FaUserCircle, FaRegBell, FaPhoneAlt, FaAlignJustify } from "react-icons/fa";
 import { useEffect, useState } from 'react';
 import axios from 'axios';
+import { Placeholder } from 'react-bootstrap';
 
 function Productpage() {
 
     const [product, setProduct] = useState([]);
 
     useEffect(() => {
-        axios.get("https://makeup-api.herokuapp.com/api/v1/products.json?brand=maybelline")
+        axios.get("https://api.escuelajs.co/api/v1/products")
             .then((res) => {
                 setProduct(res.data);
                 console.log(product); // Log the 'product' state
@@ -24,11 +25,13 @@ function Productpage() {
 
     return (
         <div className='all-pro'>
+          
             <ProductDetail />
+
             <div className="row bg">
                 <div className="col-sm-12 col-md-2 col-lg-2 menu-product">
 
-                    <ul className='all-menu'>
+                    {/* <ul className='all-menu'>
                         <li><FaUserCircle
                             style={{ width: '3rem', height: '3rem' }} /></li>
                         <li ><FaShoppingCart
@@ -40,7 +43,7 @@ function Productpage() {
                             style={{ width: '3rem', height: '3rem' }} /></li>
                         <li><FaAlignJustify
                             style={{ width: '3rem', height: '3rem' }} /></li>
-                    </ul>
+                    </ul> */}
 
                 </div>
                 <div className="col-sm-12 col-md-10 col-lg-10  all-cardp">
@@ -58,6 +61,7 @@ function Productpage() {
                 </div>
 
             </div>
+           
         </div>
     )
 }
