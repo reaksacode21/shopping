@@ -27,12 +27,12 @@
     justify-content: center;
 }
 
-img {
+/* img {
     border: 5px solid rgb(0, 204, 255);
     border-radius: 50%;
     align-items: center;
     cursor: pointer;
-}
+} */
 
 img:hover {
     border: 5px solid rgb(1, 1, 1);

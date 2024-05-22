@@ -1,20 +1,21 @@
 import React from 'react'
 import './Cardproductcss.css'
 import { FaArrowCircleRight } from "react-icons/fa";
-function Cardproduct() {
+import { handleText } from '../Utils/Handletext';
+function Cardproduct({ product }) {
     return (
         <div class="card">
             <figure>
                 {/* <div className='pic' style={{ backgroundImage: "url('https://static2.cilory.com/189111-thickbox_default/no-logo-royal-blue-full-sleeves-henley-t-shirt.jpg')" }}>
                    
                 </div> */}
-                <img src="https://static2.cilory.com/189111-thickbox_default/no-logo-royal-blue-full-sleeves-henley-t-shirt.jpg" alt="" />
+                <img src={product.image_link} alt="" />
             </figure>
             <section class="details" >
                 <div class="min-details">
                     {/* <h3>Remera <span>azul</span></h3> */}
-                    <h3>Shirt</h3>
-                    <h3 class="price">$45.99</h3>
+                    <h3>{handleText(product.name,10)}</h3>
+                    <h3 class="price">{product.price+"$"}</h3>
                 </div>
 
                 <div class="options ">
