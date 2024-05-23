@@ -27,7 +27,7 @@ function Productpage() {
         axios.get("https://api.escuelajs.co/api/v1/products")
             .then((res) => {
                 setProducts(res.data);
-                console.log(products); // Log the 'product' state
+                // console.log(products); // Log the 'product' state
             })
             .catch((error) => {
                 console.log("Error is:", error);
