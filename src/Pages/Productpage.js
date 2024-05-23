@@ -5,53 +5,51 @@ import ProductDetail from '../Components/ProductDetail'
 import { FaShoppingCart, FaUserCircle, FaRegBell, FaPhoneAlt, FaAlignJustify } from "react-icons/fa";
 import { useEffect, useState } from 'react';
 import axios from 'axios';
-import { Placeholder } from 'react-bootstrap';
+// import { Placeholder } from 'react-bootstrap';
+import { GET_ALL_PRODUCTS } from '../Services/Productservice';
+
 
 function Productpage() {
 
-    const [product, setProduct] = useState([]);
+    const [products, setProducts] = useState([]);
 
+    // useEffect(() => {
+    //     GET_ALL_PRODUCTS()
+    //         .then((res) => {
+    //             setProducts(res.data);
+    //             console.log(res);
+    //         })
+    //         .catch((error) => {
+    //             console.log(error);
+    //         });
+    // }, [products]);
     useEffect(() => {
         axios.get("https://api.escuelajs.co/api/v1/products")
             .then((res) => {
-                setProduct(res.data);
-                console.log(product); // Log the 'product' state
+                setProducts(res.data);
+                // console.log(products); // Log the 'product' state
             })
             .catch((error) => {
                 console.log("Error is:", error);
             });
 
-    }, [product]); // Add 'product' to the dependency array
+    }, [products]); // Add 'product' to the dependency array
 
     return (
         <div className='all-pro'>
-          
+
             <ProductDetail />
 
             <div className="row bg">
                 <div className="col-sm-12 col-md-2 col-lg-2 menu-product">
-
-                    {/* <ul className='all-menu'>
-                        <li><FaUserCircle
-                            style={{ width: '3rem', height: '3rem' }} /></li>
-                        <li ><FaShoppingCart
-                            style={{ width: '3rem', height: '3rem' }} /></li>
-
-                        <li><FaPhoneAlt
-                            style={{ width: '3rem', height: '3rem' }} /></li>
-                        <li><FaRegBell
-                            style={{ width: '3rem', height: '3rem' }} /></li>
-                        <li><FaAlignJustify
-                            style={{ width: '3rem', height: '3rem' }} /></li>
-                    </ul> */}
-
+                <h1>hh</h1>
                 </div>
                 <div className="col-sm-12 col-md-10 col-lg-10  all-cardp">
                     <div className="row card-bg">
                         <div className="row">
-                            {product.map((product, index) => (
+                            {products && products.length > 0 && products.map((products, index) => (
                                 <div key={index} className="col-sm-12 col-md-6 col-lg-4 mt-2 card-p">
-                                    <Cardproduct product={product} />
+                                    <Cardproduct products={products} />
                                 </div>
                             ))}
                         </div>
@@ -61,7 +59,7 @@ function Productpage() {
                 </div>
 
             </div>
-           
+
         </div>
     )
 }
