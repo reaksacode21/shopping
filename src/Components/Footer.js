@@ -6,10 +6,7 @@ import { FaFacebook, FaTwitter, FaLinkedin, FaGithub,FaInstagram ,FaPhone,FaFace
 function Footer() {
     return (
         <>
-            {/* <div class="content1">
-                <div class="text">Fully Responsive Footer Section</div>
-                <div class="p">HTML and CSS (Flexbox)</div>
-            </div> */}
+           
             <footer>
                 <div class="main-content">
                     <div class="left box">

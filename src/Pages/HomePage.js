@@ -41,7 +41,7 @@ function HomePage() {
         </div>
       </div>
 
-      <div className="container text-center mt-5 pt-5 mb-5">
+      <div className="container text-center mt-5 pt-5 mb-100">
         <h1 className="feature-title">
           {" "}
           
