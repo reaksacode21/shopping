@@ -4,35 +4,36 @@ import './Productpage.css'
 import ProductDetail from '../Components/ProductDetail'
 import { FaShoppingCart, FaUserCircle, FaRegBell, FaPhoneAlt, FaAlignJustify } from "react-icons/fa";
 import { useEffect, useState } from 'react';
-// import axios from 'axios';
+import axios from 'axios';
 // import { Placeholder } from 'react-bootstrap';
 import { GET_ALL_PRODUCTS } from '../Services/Productservice';
+
 
 function Productpage() {
 
     const [products, setProducts] = useState([]);
 
-    useEffect(() => {
-        GET_ALL_PRODUCTS()
-            .then((res) => {
-                setProducts(res.data);
-                console.log(res);
-            })
-            .catch((error) => {
-                console.log(error);
-            });
-    }, [products]);
     // useEffect(() => {
-    //     axios.get("https://api.escuelajs.co/api/v1/products")
+    //     GET_ALL_PRODUCTS()
     //         .then((res) => {
-    //             setProduct(res.data);
-    //             console.log(product); // Log the 'product' state
+    //             setProducts(res.data);
+    //             console.log(res);
     //         })
     //         .catch((error) => {
-    //             console.log("Error is:", error);
+    //             console.log(error);
     //         });
+    // }, [products]);
+    useEffect(() => {
+        axios.get("https://api.escuelajs.co/api/v1/products")
+            .then((res) => {
+                setProducts(res.data);
+                console.log(products); // Log the 'product' state
+            })
+            .catch((error) => {
+                console.log("Error is:", error);
+            });
 
-    // }, [product]); // Add 'product' to the dependency array
+    }, [products]); // Add 'product' to the dependency array
 
     return (
         <div className='all-pro'>

@@ -4,6 +4,9 @@ import { faArrowRight, faPaperPlane } from "@fortawesome/free-solid-svg-icons";
 // import CardHome from '../Components/CardHome'\
 // import Slider from '../Components/Slider'
 // import Detail from '../Components/Detail'
+import  weblogo  from '../photo/weblogo.png'
+import logoservice from '../photo/logoservice.png'
+import Onlineshop from '../photo/onlineshop.png'
 import '../styles/Homepagecss.css'
 
 function HomePage() {
@@ -44,7 +47,7 @@ function HomePage() {
       <div className="container text-center mt-5 pt-5 mb-100">
         <h1 className="feature-title">
           {" "}
-          
+
           <span className="feature-title text-success pre-scrollable">
             OPTION CUSTOMER
           </span>
@@ -62,8 +65,8 @@ function HomePage() {
           <div className="item-card px-4 pb-3 col-sm-12 col-md-4 col-lg-3">
             <img
               className="img-fluid"
-              src="https://cdn-icons-png.freepik.com/512/9674/9674659.png"
-              alt=" Socail Media "
+              src={weblogo}
+              alt="Social Media"
             />
             <h2> Mdedia</h2>
             <p> Inoculate means to protect against disease, error, or harm. In the context of financial planning, inoculation means to protect against the risk of loss.</p>
@@ -71,7 +74,7 @@ function HomePage() {
           <div className="item-card px-4 pb-3 col-sm-12 col-md-4 col-lg-3">
             <img
               className="img-fluid "
-              src="https://cdn-icons-png.freepik.com/512/9674/9674659.png"
+              src={logoservice}
               alt=" plant image "
             />
             <h2> Service</h2>
@@ -86,7 +89,7 @@ flex-md-row mt-5 pt-5 justify-content-center align-items-center"
         <div className="image-side col-sm-12 col-md-6 col-lg-5 ">
           <img
             className="img-fluid"
-            src="https://img.freepik.com/free-photo/cheerful-shopper-checking-cash-back-by-smartphone_1262-17255.jpg?t=st=1716392196~exp=1716395796~hmac=0e7f739972eb5ef08d06f493a4ab12729a767d33ddb21d504c5357c0ee9adeb6&w=1800"
+            src={Onlineshop}
             alt="image flower"
           />
         </div>
@@ -153,11 +156,11 @@ flex-md-row mt-5 pt-5 justify-content-center align-items-center"
 
       </div>
 
-      
 
 
 
-      
+
+
 
 
       <div
