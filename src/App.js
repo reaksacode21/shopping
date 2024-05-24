@@ -5,6 +5,7 @@ import Navbar from './Components/Navbar';
 import HomePage from './Pages/HomePage';
 import Productpage from './Pages/Productpage';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import About from './Pages/About';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Routes>
         <Route path="/" index element={<HomePage />} />
         <Route path="/shop" index element={<Productpage />} />
+        <Route path="/about" index element={<About />} />
         </Routes>
         <Footer/>
     </BrowserRouter>

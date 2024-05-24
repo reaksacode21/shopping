@@ -9,7 +9,7 @@ function Cardproduct({ products }) {
                 {/* <div className='pic' style={{ backgroundImage: "url('https://static2.cilory.com/189111-thickbox_default/no-logo-royal-blue-full-sleeves-henley-t-shirt.jpg')" }}>
                    
                 </div> */}
-                <img src={products.images} alt="" />
+                <img src={products.images} alt=""  style={{width:'100%',height:'400px'}}/>
             </figure>
             <section class="details" >
                 <div class="min-details">
