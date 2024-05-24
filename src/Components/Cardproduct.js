@@ -3,7 +3,9 @@ import './Cardproductcss.css'
 
 import { handleText } from '../Utils/Handletext';
 function Cardproduct({ products }) {
+    
     return (
+        
         <div class="card">
             <figure>
                 {/* <div className='pic' style={{ backgroundImage: "url('https://static2.cilory.com/189111-thickbox_default/no-logo-royal-blue-full-sleeves-henley-t-shirt.jpg')" }}>
