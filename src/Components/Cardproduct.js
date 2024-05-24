@@ -11,7 +11,14 @@ function Cardproduct({ products }) {
                 {/* <div className='pic' style={{ backgroundImage: "url('https://static2.cilory.com/189111-thickbox_default/no-logo-royal-blue-full-sleeves-henley-t-shirt.jpg')" }}>
                    
                 </div> */}
-                <img src={products.images} alt=""  style={{width:'100%',height:'400px'}}/>
+                <img src={products.images}
+                onError={
+                    ({currentTarget})=>{
+                        currentTarget.onerror = null;
+                        currentTarget.src = "https://www.pngkey.com/png/full/233-2332677_image-500580-placeholder-transparent.png"
+                    }
+                }
+                alt=""  style={{width:'100%',height:'400px'}}/>
             </figure>
             <section class="details" >
                 <div class="min-details">
@@ -42,6 +49,10 @@ function Cardproduct({ products }) {
                             <li></li>
                         </ul>
                     </div>
+                    {/* <div className="description">
+                        <h3 style={{color:"green"}}>description</h3>
+                        <p>{handleText(products.description,25)}</p>
+                    </div> */}
 
                 </div>
                 <div className='row'>
