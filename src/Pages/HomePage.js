@@ -7,6 +7,8 @@ import { faArrowRight, faPaperPlane } from "@fortawesome/free-solid-svg-icons";
 import  weblogo  from '../photo/weblogo.png'
 import logoservice from '../photo/logoservice.png'
 import Onlineshop from '../photo/onlineshop.png'
+import homegirl from '../photo/homegirl.png'
+import Olineshopping from '../photo/onlineshopping.png'
 import '../styles/Homepagecss.css'
 
 function HomePage() {
@@ -92,7 +94,7 @@ flex-md-row mt-5 pt-5 justify-content-center align-items-center"
         <div className="image-side col-sm-12 col-md-6 col-lg-5 ">
           <img
             className="img-fluid"
-            src={Onlineshop}
+            src={Olineshopping}
             alt="image flower"
           />
         </div>
@@ -117,7 +119,7 @@ flex-md-row mt-5 pt-5 justify-content-center align-items-center"
         <div className="image-side col-sm-12 col-md-6 col-lg-5 ">
           <img
             className="img-fluid"
-            src="https://img.freepik.com/free-vector/social-tree-concept-illustration_114360-4898.jpg"
+            src={homegirl}
             alt="image flower"
           />
         </div>

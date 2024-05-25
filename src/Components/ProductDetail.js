@@ -2,13 +2,25 @@ import React from 'react'
 import './ProductDetailcss.css'
 import { FaArrowLeft } from "react-icons/fa";
 import Placehodercard from './Placehodercard';
+import shirt from '../photo/shirt.jpg'
 function ProductDetail() {
     return (
         <div className='all-detail'>
             <div className="row  all-detailReal">
                 <div className="col-sm-12 col-md-6 col-lg-6 all-productPic">
                     {/* <h1>Product Picture</h1> */}
-                    <Placehodercard/>
+                    <div className='container'>
+                        <div className='big-pic'>
+                            <img src={shirt} alt=""  style={{width:'30rem',height:'20rem'}}/>
+                        </div>
+                        <div className="list-pic">
+                            <ul>
+                                <li>11</li>
+                                <li>11</li>
+                                <li>11</li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
                 <div className="col-sm-12 col-md-6 col-lg-6 all-productDetail">
                     <h1>Product Details</h1>
@@ -23,10 +35,10 @@ function ProductDetail() {
                     <h3>End   Date:  <span> 13/05/2035</span></h3>
                     <div className="row p-2">
                         <div className='col-sm-12 col-md-6 col-lg-6  '>
-                        <button className='btn btn-danger'><FaArrowLeft /></button>
+                            <button className='btn btn-danger'><FaArrowLeft /></button>
                         </div>
                         <div className='col-sm-12 col-md-6 col-lg-6 '>
-                        <button className='btn btn-success'>Buy</button>
+                            <button className='btn btn-success'>Buy</button>
                         </div>
                     </div>
                 </div>

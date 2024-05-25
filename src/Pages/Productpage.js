@@ -14,6 +14,7 @@ function Productpage() {
 
     const [products, setProducts] = useState([]);
     const [isLoading, setisLoading] = useState(true);
+    //this make page gination
     const [totalpage,settotalpage]=useState(0);
     const [currentpage,setcurrentpage]=useState(0);
     const itemperpage=6;
@@ -26,6 +27,7 @@ function Productpage() {
     const handlePageChange=(selectpage)=>{
         setcurrentpage(selectpage.selected);
     }
+    //end
     useEffect(() => {
         GET_ALL_PRODUCTS()
             .then(

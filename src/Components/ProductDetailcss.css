@@ -15,3 +15,20 @@
     background-color: rgba(137, 43, 226, 0);
    
 }
+.big-pic{
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    width: 500px;
+    height: 400px;
+}
+.list-pic{
+    justify-content: center;
+    align-items: center;
+}
+.list-pic >ul{
+    display: inline;
+}
+.list-pic >ul >li{
+    flex-direction: row;
+}
