@@ -61,6 +61,7 @@ function HomePage() {
             />
             <h2> Online</h2>
             <p> Inoculate means to protect against disease, error, or harm. In the context of financial planning, inoculation means to protect against the risk of loss.</p>
+            <button  className='btn btn-success'>Read more...</button>
           </div>
           <div className="item-card px-4 pb-3 col-sm-12 col-md-4 col-lg-3">
             <img
@@ -70,6 +71,7 @@ function HomePage() {
             />
             <h2> Mdedia</h2>
             <p> Inoculate means to protect against disease, error, or harm. In the context of financial planning, inoculation means to protect against the risk of loss.</p>
+            <button  className='btn btn-success'>Read more...</button>
           </div>
           <div className="item-card px-4 pb-3 col-sm-12 col-md-4 col-lg-3">
             <img
@@ -79,6 +81,7 @@ function HomePage() {
             />
             <h2> Service</h2>
             <p> Inoculate means to protect against disease, error, or harm. In the context of financial planning, inoculation means to protect against the risk of loss.</p>
+            <button  className='btn btn-success'>Read more...</button>
           </div>
         </div>
       </div>

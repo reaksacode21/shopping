@@ -8,12 +8,24 @@ import axios from 'axios';
 // import { Placeholder } from 'react-bootstrap';
 import { GET_ALL_PRODUCTS } from '../Services/Productservice';
 import Placehodercard from '../Components/Placehodercard';
- import { counbooking } from '../Utils/count.js';
+import { counbooking } from '../Utils/count.js';
+import ReactPaginate from 'react-paginate';
 function Productpage() {
 
     const [products, setProducts] = useState([]);
     const [isLoading, setisLoading] = useState(true);
+    const [totalpage,settotalpage]=useState(0);
+    const [currentpage,setcurrentpage]=useState(0);
+    const itemperpage=6;
+    const startIndex = currentpage * itemperpage;
+    const endIndex = startIndex + itemperpage; 
+  
+    const subset = products.slice(startIndex, endIndex);
 
+
+    const handlePageChange=(selectpage)=>{
+        setcurrentpage(selectpage.selected);
+    }
     useEffect(() => {
         GET_ALL_PRODUCTS()
             .then(
@@ -21,8 +33,12 @@ function Productpage() {
                 data => {
                     let filterProduct = data
                     setProducts(filterProduct.sort((a, b) => a.id - b.id));
+                   settotalpage(
+                    Math.ceil(filterProduct.length / itemperpage)
+                   )
                     setisLoading(false);
                 }
+
 
             )
             .catch((error) => {
@@ -50,14 +66,15 @@ function Productpage() {
     //     // console.log(setCount);
     //     return setCount;
     // }
-    
-        const [count, setCount] = useState(0);
-      
-        function handleClick() {
-         setCount(count + 1);
+
+    const [count, setCount] = useState(0);
+
+    function handleClick() {
+        setCount(count + 1);
         //   console.log(setCount);
-          counbooking(count + 1);
-        }
+        counbooking(count + 1);
+    }
+
     return (
         <div className='all-pro'>
 
@@ -76,6 +93,9 @@ function Productpage() {
                             <li><button className='btn btn-success mt-2'>Shirt</button></li>
                             <li><button className='btn btn-success mt-2'>Shirt</button></li>
                             <li><button className='btn btn-success mt-2'>Shirt</button></li>
+                            <li><button className='btn btn-success mt-2'>Shirt</button></li>
+                            {/* <li><button className='btn btn-success mt-2'>Shirt</button></li>
+                            <li><button className='btn btn-success mt-2'>Shirt</button></li> */}
                         </ul>
                     </div>
                 </div>
@@ -94,7 +114,7 @@ function Productpage() {
                                     </>
                                 ) :
                                     <>
-                                        {products && products.length > 0 && products.map((products, index) => (
+                                        {subset.map((products, index) => (
                                             <div key={index} className="col-sm-12 col-md-6 col-lg-4 mt-2 card-p">
                                                 <Cardproduct products={products} />
                                             </div>
@@ -102,6 +122,30 @@ function Productpage() {
                                     </>
                             }
                         </div>
+
+                        <div className="d-flex justify-content-center  bg-light py-3">
+                            <ReactPaginate
+                                previousLabel={'Previous'}
+                                nextLabel={'Next'}
+                                breakLabel={'...'}
+                                pageCount={totalpage}
+                                marginPagesDisplayed={2}
+                                pageRangeDisplayed={5}
+                                 onPageChange={handlePageChange}
+                                containerClassName={'pagination'}
+                                pageClassName={'page-item'}
+                                pageLinkClassName={'page-link'}
+                                previousClassName={'page-item'}
+                                previousLinkClassName={'page-link'}
+                                nextClassName={'page-item '}
+                                nextLinkClassName={'page-link'}
+                                breakClassName={'page-item'}
+                                breakLinkClassName={'page-link'}
+                                activeClassName={'active '} />
+                        </div>
+
+
+
 
 
                     </div>
