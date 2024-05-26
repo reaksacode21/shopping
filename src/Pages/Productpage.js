@@ -39,6 +39,7 @@ function Productpage() {
                     Math.ceil(filterProduct.length / itemperpage)
                    )
                     setisLoading(false);
+                    // console.log(filterProduct)
                 }
 
 
