@@ -2,8 +2,16 @@ import React from 'react'
 import './Cardproductcss.css'
 
 import { handleText } from '../Utils/Handletext';
+import { useNavigate } from 'react-router-dom';
+
 function Cardproduct({ products }) {
-    
+    let navigate=useNavigate();
+    let makeId;
+    const catchid =()=>{
+        makeId=products.id;
+        
+        console.log(makeId);
+    }
     return (
         
         <div class="card">
@@ -49,20 +57,20 @@ function Cardproduct({ products }) {
                             <li></li>
                         </ul>
                     </div>
-                    {/* <div className="description">
-                        <h3 style={{color:"green"}}>description</h3>
-                        <p>{handleText(products.description,25)}</p>
-                    </div> */}
+                   
 
                 </div>
                 <div className='row'>
-                    <div className="col-sm-6 col-md-6 col-lg-6">
-                        <a href="#" class="btn btn-success">Details</a>
-                    </div>
-                    <div className="col-sm-6 col-md-6 col-lg-6">
-                        <a href="#" class="btn btn-success">Buy</a>
+                    <div className="col-sm-12 col-md-12 col-lg-12">
+                        <a href="#" class="btn btn-success"
+                         onClick={() => {
+                            // navigate(`/shop/${products.id}`);
+                            catchid();
 
+                          }}
+                        >Details</a>
                     </div>
+                    
                 </div>
             </section>
         </div>
