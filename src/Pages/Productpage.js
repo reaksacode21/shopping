@@ -80,7 +80,7 @@ function Productpage() {
     return (
         <div className='all-pro'>
 
-            <ProductDetail />
+            {/* <ProductDetail /> */}
 
             <div className="row bg">
                 <div className="col-sm-12 col-md-2 col-lg-2 menu-product">

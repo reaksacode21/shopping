@@ -64,8 +64,8 @@ function Cardproduct({ products }) {
                     <div className="col-sm-12 col-md-12 col-lg-12">
                         <a href="#" class="btn btn-success"
                          onClick={() => {
-                            // navigate(`/shop/${products.id}`);
-                            catchid();
+                             navigate(`/products/${products.id}`);
+                            // catchid();
 
                           }}
                         >Details</a>

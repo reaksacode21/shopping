@@ -6,6 +6,7 @@ import HomePage from './Pages/HomePage';
 import Productpage from './Pages/Productpage';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import About from './Pages/About';
+import ProductDetail from './Components/ProductDetail';
 
 function App() {
   return (
@@ -13,8 +14,9 @@ function App() {
         <Navbar/>
         <Routes>
         <Route path="/" index element={<HomePage />} />
-        <Route path="/shop" index element={<Productpage />} />
+        <Route path="/products" index element={<Productpage />} />
         <Route path="/about" index element={<About />} />
+        <Route path="/products/:id" index element={<ProductDetail/>} />
         </Routes>
         <Footer/>
     </BrowserRouter>

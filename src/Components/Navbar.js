@@ -1,6 +1,7 @@
 import React from 'react'
 import { FaAlignJustify } from "react-icons/fa";
 import './Navbarcss.css'
+import { FaWeightHanging } from "react-icons/fa";
 
 function Navbar() {
     return (
@@ -13,10 +14,13 @@ function Navbar() {
                         <FaAlignJustify />
                     </i>
                 </label>
-                <label class="logo">BlueShop</label>
+                <label class="logo">
+                   <FaWeightHanging />
+                   
+                    BlueShop</label>
                 <ol>
                     <li><a class="active" href="/">Home</a></li>
-                    <li><a href="/shop">Shop</a></li>
+                    <li><a href="/products">Shop</a></li>
                     <li><a href="/about">About Us</a></li>
                     <li><a href="#">Contact</a></li>
                     <li><a href="#" class="active">Login</a></li>
