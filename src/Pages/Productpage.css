@@ -61,3 +61,13 @@
     justify-content: space-evenly;
 }
 
+@media (max-width: 760px){
+    .list-menu{
+        width: 760px;
+        /* border: 1px solid black; */
+    }
+    .list-menu ul li{
+        display: flex;
+      
+    }
+}

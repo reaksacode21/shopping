@@ -15,16 +15,16 @@ function Productpage() {
     const [products, setProducts] = useState([]);
     const [isLoading, setisLoading] = useState(true);
     //this make page gination
-    const [totalpage,settotalpage]=useState(0);
-    const [currentpage,setcurrentpage]=useState(0);
-    const itemperpage=6;
+    const [totalpage, settotalpage] = useState(0);
+    const [currentpage, setcurrentpage] = useState(0);
+    const itemperpage = 6;
     const startIndex = currentpage * itemperpage;
-    const endIndex = startIndex + itemperpage; 
-  
+    const endIndex = startIndex + itemperpage;
+
     const subset = products.slice(startIndex, endIndex);
 
 
-    const handlePageChange=(selectpage)=>{
+    const handlePageChange = (selectpage) => {
         setcurrentpage(selectpage.selected);
     }
     //end
@@ -35,9 +35,9 @@ function Productpage() {
                 data => {
                     let filterProduct = data
                     setProducts(filterProduct.sort((a, b) => a.id - b.id));
-                   settotalpage(
-                    Math.ceil(filterProduct.length / itemperpage)
-                   )
+                    settotalpage(
+                        Math.ceil(filterProduct.length / itemperpage)
+                    )
                     setisLoading(false);
                     // console.log(filterProduct)
                 }
@@ -85,21 +85,24 @@ function Productpage() {
 
             <div className="row bg">
                 <div className="col-sm-12 col-md-2 col-lg-2 menu-product">
+                  
+                   
                     <div className="list-menu">
+                   
                         <ul>
-                            <li><h4>CATEGORY</h4></li>
-                            <li><button className='btn btn-success mt-2'></button></li>
 
+
+                        <h4>CATEGORY</h4>
                             <li><button className='btn btn-success mt-2'
                                 // onClick={counbooking()}
                                 // onClick={counbooking()}
                                 onClick={handleClick}
                             >{count}</button></li>
-                            
+
                             <li><button className='btn btn-success mt-2'>Shirt</button></li>
                             <li><button className='btn btn-success mt-2'>Shouse</button></li>
                             <li><button className='btn btn-success mt-2'> Materail</button></li>
-                           
+
                             {/* <li><button className='btn btn-success mt-2'>Shirt</button></li>
                             <li><button className='btn btn-success mt-2'>Shirt</button></li> */}
                         </ul>
@@ -137,7 +140,7 @@ function Productpage() {
                                 pageCount={totalpage}
                                 marginPagesDisplayed={2}
                                 pageRangeDisplayed={5}
-                                 onPageChange={handlePageChange}
+                                onPageChange={handlePageChange}
                                 containerClassName={'pagination'}
                                 pageClassName={'page-item'}
                                 pageLinkClassName={'page-link'}

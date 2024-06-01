@@ -22,7 +22,7 @@ function Navbar() {
                     <li><a class="active" href="/">Home</a></li>
                     <li><a href="/products">Shop</a></li>
                     <li><a href="/about">About Us</a></li>
-                    <li><a href="#">Contact</a></li>
+                  
                     <li><a href="#" class="active">Login</a></li>
                 </ol>
             </nav>

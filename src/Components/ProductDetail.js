@@ -47,47 +47,71 @@ function ProductDetail() {
                         <span className="placeholder col-7"></span>
                         <span className="placeholder col-4"></span>
 
+
                     </p>
                 </div>
             </div>
         )
     }
+    const plachoderText = (num) => {
+        let c = [];
+
+        for (let i; i < num; i++) {
+
+            c.push(
+                <div className="placeholder-card card p-0 m-5 mt-0" aria-hidden="true" style={{ width: '500px' }}>
+                    <div className="card-body">
+
+                        <p className="card-text placeholder-glow">
+                            <span className="placeholder col-7"></span>
+                            <span className="placeholder col-4"></span>
+                            <span className="placeholder col-7"></span>
+                            <span className="placeholder col-4"></span>
+                        </p>
+                    </div>
+                </div>
+            )
+
+        }
+        return c;
+
+    }
     return (
         <div className="all-detail">
             <div className="row all-detailReal">
                 <div className="col-lg-6 all-productPic">
-                    
+
                     <div className="container">
-                    <div className='btnback' style={{backgroundColor:'green',borderRadius:'10px'}}>
-                    <FaArrowLeft
-                        style={{
-                            width: '3rem',
-                            height: '3rem',
-                            color: 'red',
-                            cursor: 'pointer',
-                        }}
-                        onMouseEnter={(e) => {
-                            e.currentTarget.style.color = 'blue';
-                        }}
-                        onMouseLeave={(e) => {
-                            e.currentTarget.style.color = 'red';
-                        }}
-                        onClick={() => {
-                            navigate(`/products`);
-                        }}
-                       
-                    />
-                    <span>YOU CAN BACK TO PRODUCT</span>
-                    </div>
+                        <div className='btnback' style={{ backgroundColor: 'green', borderRadius: '10px' }}>
+                            <FaArrowLeft
+                                style={{
+                                    width: '3rem',
+                                    height: '3rem',
+                                    color: 'red',
+                                    cursor: 'pointer',
+                                }}
+                                onMouseEnter={(e) => {
+                                    e.currentTarget.style.color = 'blue';
+                                }}
+                                onMouseLeave={(e) => {
+                                    e.currentTarget.style.color = 'red';
+                                }}
+                                onClick={() => {
+                                    navigate(`/products`);
+                                }}
+
+                            />
+                            <span>YOU CAN BACK TO PRODUCT</span>
+                        </div>
                         {isLoading ? (
                             <>
-                                
+
                                 {placehoderCardDetail()}
                             </>
                         ) : (
                             <>
                                 <div className="big-pic">
-                                    
+
                                     <img
                                         src={chosenImage}
                                         alt=""
@@ -108,9 +132,9 @@ function ProductDetail() {
                                                             src={imageValue}
                                                             alt="Image"
                                                             onClick={() => setChosenImage(imageValue)}
-                                                            onError={(currentTarget)=>{
-                                                                currentTarget.onerror=null;
-                                                                currentTarget.target.src="https://www.pngkey.com/png/full/233-2332677_image-500580-placeholder-transparent.png";
+                                                            onError={(currentTarget) => {
+                                                                currentTarget.onerror = null;
+                                                                currentTarget.target.src = "https://www.pngkey.com/png/full/233-2332677_image-500580-placeholder-transparent.png";
 
                                                             }}
                                                         />
@@ -125,27 +149,73 @@ function ProductDetail() {
                 </div>
 
                 <div className="col-lg-6 all-productDetail">
-                    <h1>Product Details</h1>
-                    <h1>{product.title}</h1>
-                    <h3>Price: ${product.price}</h3>
-                    <h3>Description:</h3>
-                    <div className="overflow-auto">
-                        {product.description}
-                    </div>
-                    <h3>Date Of Product</h3>
-           
-                    <h3>Start Date: <span>{product.creationAt}</span></h3>
-                    <h3>End Date: <span>{product.updatedAt}</span></h3>
-                    <div className="row p-2">
-                        {/* <div className="col-lg-6">
-                            <button className="btn btn-danger" onClick={() => navigate('/products')}>
-                                <FaArrowLeft /> Back
-                            </button>
-                        </div> */}
-                        <div className="col-lg-3">
-                            <button className="btn btn-success">Buy</button>
-                        </div>
-                    </div>
+                    {
+                        isLoading ? (
+                            <>
+                                {/* {plachoderText(9)} */}
+                                <div className="card-body">
+
+                                    <p className="card-text placeholder-glow">
+                                        <span className="placeholder col-5 mt-4"></span>
+                                        <span className="placeholder col-4 mt-4"></span>
+                                        <span className="placeholder col-5 mt-4"></span>
+                                        <span className="placeholder col-4 mt-4"></span>
+                                        <span className="placeholder col-6 mt-4"></span>
+                                        <span className="placeholder col-4 mt-4"></span>
+                                        <span className="placeholder col-6 mt-4"></span>
+                                        <span className="placeholder col-4 mt-4"></span>
+                                        <span className="placeholder col-6 mt-4"></span>
+                                        <span className="placeholder col-4 mt-4"></span>
+                                        <span className="placeholder col-5 mt-4"></span>
+                                        <span className="placeholder col-4 mt-4"></span>
+                                        <span className="placeholder col-7 mt-4"></span>
+                                        <span className="placeholder col-4 mt-4"></span>
+                                        <span className="placeholder col-7 mt-4"></span>
+                                        <span className="placeholder col-4 mt-4"></span>
+                                        <span className="placeholder col-7 mt-4"></span>
+                                        <span className="placeholder col-4 mt-4"></span>
+                                        <span className="placeholder col-7 mt-4"></span>
+                                        <span className="placeholder col-4 mt-4"></span>
+                                        <span className="placeholder col-7 mt-4"></span>
+                                        <span className="placeholder col-4 mt-4"></span>
+                                        <span className="placeholder col-7 mt-4"></span>
+                                        <span className="placeholder col-4 mt-4"></span>
+                                        <span className="placeholder col-7 mt-4"></span>
+                                        <span className="placeholder col-4 mt-4"></span>
+                                        <span className="placeholder col-3 mt-4"></span>
+                                        <span className="placeholder col-4 mt-4"></span>
+                                        <span className="placeholder col-3 mt-4"></span>
+                                        <span className="placeholder col-4 mt-4"></span>
+
+
+
+                                    </p>
+                                </div>
+
+                            </>
+                        ) : (
+                            <>
+                                <h1>Product Details</h1>
+                                <h1>{product.title}</h1>
+                                <h3>Price: ${product.price}</h3>
+                                <h3>Description:</h3>
+                                <div className="overflow-auto">
+                                    {product.description}
+                                </div>
+                                <h3>Date Of Product</h3>
+
+                                <h3>Start Date: <span>{product.creationAt}</span></h3>
+                                <h3>End Date: <span>{product.updatedAt}</span></h3>
+                                <div className="row p-2">
+
+                                    <div className="col-sm-3 col-lg-3">
+                                        <button className="btn btn-success">Buy</button>
+                                    </div>
+                                </div>
+                            </>
+                        )
+                    }
+
                 </div>
             </div>
         </div>
