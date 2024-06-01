@@ -14,16 +14,11 @@ function App() {
         <Navbar/>
         <Routes>
         <Route path="/" index element={<HomePage />} />
-<<<<<<< HEAD
+
         <Route path="/products" index element={<Productpage />} />
         <Route path="/about" index element={<About />} />
         <Route path="/products/:id" index element={<ProductDetail/>} />
-=======
-        <Route path="/shop"  element={<Productpage />} />
-        <Route path="/shop/:id"  element={<ProductDetail />} />
-        <Route path="/about"  element={<About />} />
-        
->>>>>>> 7b5910999a77278dec1c678f346187119e7afc25
+
         </Routes>
         <Footer/>
     </BrowserRouter>

@@ -14,10 +14,10 @@ function Footer() {
                         <div class="content">
                             <p>reaksaCode21 is a YouTube channel where you can learn web designing, web development, ui/ux designing, html css tutorial, hover animation and effects, javascript and jquery tutorial and related so on.</p>
                             <div class="social">
-                                <a href="https://facebook.com/coding.np"><span><FaFacebook/></span></a>
+                                <a href="httpsss"><span><FaFacebook/></span></a>
                                 <a href="#"><span class="fab fa-twitter"><FaTwitter/></span></a>
-                                <a href="https://instagram.com/coding.np"><span class="fab fa-instagram"><FaInstagram/></span></a>
-                                <a href="https://youtube.com/c/codingnepal"><span class="fab fa-youtube"><FaLinkedin/></span></a>
+                                <a href="https:/sssp"><span class="fab fa-instagram"><FaInstagram/></span></a>
+                                <a href="http"><span class="fab fa-youtube"><FaLinkedin/></span></a>
                             </div>
                         </div>
                     </div>
@@ -61,7 +61,7 @@ function Footer() {
                 </div>
                 <div class="bottom">
                     <center>
-                        <span class="credit">Created By <a href="https://.com">REAKSA SG RA</a> | </span>
+                        <span class="credit">Created By <a href="https">REAKSA SG RA</a> | </span>
                         <span class="far fa-copyright"></span><span> 2024 All rights reserved.</span>
                     </center>
                 </div>

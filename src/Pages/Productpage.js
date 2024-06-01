@@ -87,16 +87,19 @@ function Productpage() {
                 <div className="col-sm-12 col-md-2 col-lg-2 menu-product">
                     <div className="list-menu">
                         <ul>
-                            <li>CATEGORY</li>
+                            <li><h4>CATEGORY</h4></li>
+                            <li><button className='btn btn-success mt-2'></button></li>
+
                             <li><button className='btn btn-success mt-2'
                                 // onClick={counbooking()}
                                 // onClick={counbooking()}
                                 onClick={handleClick}
                             >{count}</button></li>
+                            
                             <li><button className='btn btn-success mt-2'>Shirt</button></li>
-                            <li><button className='btn btn-success mt-2'>Shirt</button></li>
-                            <li><button className='btn btn-success mt-2'>Shirt</button></li>
-                            <li><button className='btn btn-success mt-2'>Shirt</button></li>
+                            <li><button className='btn btn-success mt-2'>Shouse</button></li>
+                            <li><button className='btn btn-success mt-2'> Materail</button></li>
+                           
                             {/* <li><button className='btn btn-success mt-2'>Shirt</button></li>
                             <li><button className='btn btn-success mt-2'>Shirt</button></li> */}
                         </ul>
