@@ -133,8 +133,9 @@ function ProductDetail() {
                         {product.description}
                     </div>
                     <h3>Date Of Product</h3>
-                    <h3>Start Date: <span>13/05/2023</span></h3>
-                    <h3>End Date: <span>13/05/2035</span></h3>
+           
+                    <h3>Start Date: <span>{product.creationAt}</span></h3>
+                    <h3>End Date: <span>{product.updatedAt}</span></h3>
                     <div className="row p-2">
                         {/* <div className="col-lg-6">
                             <button className="btn btn-danger" onClick={() => navigate('/products')}>
