@@ -82,7 +82,7 @@ function ProductDetail() {
                 <div className="col-lg-6 all-productPic">
 
                     <div className="container">
-                        <div className='btnback' style={{ backgroundColor: 'green', borderRadius: '10px' }}>
+                        <div className='btnback' style={{ backgroundColor: 'white', borderRadius: '10px' }}>
                             <FaArrowLeft
                                 style={{
                                     width: '3rem',

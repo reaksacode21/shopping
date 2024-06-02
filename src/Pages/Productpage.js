@@ -10,6 +10,7 @@ import { GET_ALL_PRODUCTS } from '../Services/Productservice';
 import Placehodercard from '../Components/Placehodercard';
 import { counbooking } from '../Utils/count.js';
 import ReactPaginate from 'react-paginate';
+import { useNavigate } from 'react-router-dom';
 function Productpage() {
 
     const [products, setProducts] = useState([]);
@@ -20,12 +21,26 @@ function Productpage() {
     const itemperpage = 6;
     const startIndex = currentpage * itemperpage;
     const endIndex = startIndex + itemperpage;
+    let navigat=useNavigate();
 
-    const subset = products.slice(startIndex, endIndex);
+    // const subset = products.slice(startIndex, endIndex);
+    //=================================================
+    const [selectedCategory, setSelectedCategory] = useState(null);
+    //this is just select category
+    const subset = selectedCategory 
+    ? products.filter(product => product.price === selectedCategory).slice(startIndex, endIndex)
+    : products.slice(startIndex, endIndex);
 
-
+    //==================================================function section product
+    const handleCategoryFilter = (price) => {
+        setSelectedCategory(price);
+        setcurrentpage(0); // Reset pagination when changing category
+    }
+    //===========================================================
     const handlePageChange = (selectpage) => {
         setcurrentpage(selectpage.selected);
+        navigat(`/products`);
+
     }
     //end
     useEffect(() => {
@@ -98,7 +113,7 @@ function Productpage() {
                                 // onClick={counbooking()}
                                 onClick={handleClick}
                             >{count}</button></li>
-
+                              <li><button className='btn btn-success mt-2' onClick={() => handleCategoryFilter(35)}>Shirt</button></li>
                             <li><button className='btn btn-success mt-2'>Shirt</button></li>
                             <li><button className='btn btn-success mt-2'>Shouse</button></li>
                             <li><button className='btn btn-success mt-2'> Materail</button></li>
